@@ -4,7 +4,8 @@
   "description": "A medical memory API REST",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "startdev": "nodemon ./app.js"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,13 @@
     "memory"
   ],
   "dependencies": {
-    "mongoose": "~4.13.4",
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "jwt-simple": "^0.5.1",
     "method-override": "^2.3.10",
-    "body-parser": "^1.18.2"
+    "moment": "^2.20.1",
+    "mongoose": "~4.13.4"
   },
   "author": "pvacas",
   "license": "ISC",
@@ -28,5 +32,7 @@
     "url": "https://github.com/b4tp0d/MedicaMe/issues"
   },
   "homepage": "https://github.com/b4tp0d/MedicaMe#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^1.14.6"
+  }
 }

@@ -12,7 +12,7 @@ exports.findAllNHC = function(req, res) {
     });
 };
 
-    //GET - Return a patients with specified ID
+    //GET - Return a clinic history with specified ID
 exports.findById = function(req, res) {
 	ClinicHist.findById(req.params.nhc, function(err, nhcs) {
     if(err) return res.send(500, err.message);
@@ -23,22 +23,19 @@ exports.findById = function(req, res) {
 };
 
 //POST - Insert a new nhc in the DB
-exports.addPatient = function(req, res) {
+exports.addNHC = function(req, res) {
 	console.log('POST');
 	console.log(req.body);
 
 	var nhcs = new ClinicHist({
 		nhc:        req.body.nhc,
-        name: 	    req.body.year,
-        medication: {
-            description:    req.body.medication.description,
-            breakfast:  {
-                cuantity:   req.body.medication.breakfast.cuantity    
-            }
-        
-        
-        
-        },
+    name: 	    req.body.year,
+    medication: {
+			description:    req.body.medication.description,
+			breakfast:  {
+				cuantity:   req.body.medication.breakfast.cuantity
+			}
+		},
 		surname:    req.body.country,
 		nhc:        req.body.poster,
 		telephone:  req.body.seasons,
