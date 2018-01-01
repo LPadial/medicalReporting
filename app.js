@@ -16,18 +16,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride());
 
-// Import Models and controllers
-var models = require('./models/patient')(app, mongoose);
-
 // Patient routes
 var patient_routes = require('./routes/patient');
 
 // Doctor routes
 var doctor_routes = require('./routes/doctor');
 
+// Clinic History routes
+var clinicHistory_routes = require('./routes/clinichistory');
+
 //You can access to the routes with this links
 app.use('/medical_reports', patient_routes);
 app.use('/medical_reports', doctor_routes);
+app.use('/medical_reports', clinicHistory_routes);
 
 //Start node server
 app.listen(3000, function() {

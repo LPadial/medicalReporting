@@ -1,91 +1,66 @@
 //File: controllers/clinichistory.js
 var mongoose = require('mongoose');
-var ClinicHist  = mongoose.model('ClinicHistory');
+var ClinicHist  = require('../models/clinichistory');
 
-//GET - Return all clinic historials in the DB
-exports.findAllNHC = function(req, res) {
-	ClinicHist.find(function(err, nhcs) {
-    if(err) res.send(500, err.message);
-
-    console.log('GET /nhcs')
-		res.status(200).jsonp(nhcs);
-    });
-};
-
-    //GET - Return a clinic history with specified ID
-exports.findById = function(req, res) {
-	ClinicHist.findById(req.params.nhc, function(err, nhcs) {
-    if(err) return res.send(500, err.message);
-
-    console.log('GET /nhcs/' + req.params.nhc);
-		res.status(200).jsonp(nhcs);
-	});
-};
-
-//POST - Insert a new nhc in the DB
-exports.addNHC = function(req, res) {
+//POST - Insert a new clinic history in the DB
+exports.addClinicHistory = function(req, res) {
 	console.log('POST');
 	console.log(req.body);
 
-	var nhcs = new ClinicHist({
-		nhc:        req.body.nhc,
-    name: 	    req.body.year,
-    medication: {
-			description:    req.body.medication.description,
-			breakfast:  {
-				cuantity:   req.body.medication.breakfast.cuantity
-			}
-		},
-		surname:    req.body.country,
-		nhc:        req.body.poster,
-		telephone:  req.body.seasons,
-		age:        req.body.genre,
-        ssnumber:   req.body.summary,
-        gender:     req.body.gender,
-        admission:  req.body.admission,
-        birthday:   req.body.birthday,
-        room:       req.body.room,
-        address:    req.body.address
+	var clinicHistory = new ClinicHist({
+		descriptionMedication: req.body.descriptionMedication,
+		indicationMedication: req.body.indicationMedication,
+		initDateMedication: req.body.initDateMedication,
+		finalDateMedication: req.body.finalDateMedication,
+		allergies: req.body.allergies
 	});
 
-    nhcs.save(function(err, nhcs) {
-		if(err) return res.status(500).send( err.message);
-    res.status(200).jsonp(nhcs);
+	clinicHistory.save(function(err, clinicHistory) {
+		if(err) return res.status(500).send(err.message);
+		res.status(200).jsonp(clinicHistory);
 	});
 };
 
 //PUT - Update a register already exists
-exports.updatePatient = function(req, res) {
-	ClinicHist.findById(req.params.nhc, function(err, nhcs) {
-		nhcs.id          =   req.body.title,
-		nhcs.name        = 	req.body.year,
-		nhcs.surname     =   req.body.country,
-		nhcs.nhc         =   req.body.poster,
-		nhcs.telephone   =   req.body.seasons,
-		nhcs.age         =   req.body.genre,
-        nhcs.ssnumber    =   req.body.summary,
-        nhcs.gender      =   req.body.gender,
-        nhcs.admission   =   req.body.admission,
-        nhcs.birthday    =   req.body.birthday,
-        nhcs.room        =   req.body.room,
-		nhcs.address     =   req.body.address,
-		nhcs.bed         =   req.body.bed,
-		nhcs.reason      =   req.body.reason,
-		nhcs.diseases     =   req.body.diseases,
+exports.updateClinicHistory = function(req, res) {
+	ClinicHist.findById(req.params.id, function(err, clinicHistory) {
+		clinicHistory.descriptionMedication = req.body.descriptionMedication,
+		clinicHistory.indicationMedication = req.body.indicationMedication,
+		clinicHistory.initDateMedication = req.body.initDateMedication,
+		clinicHistory.finalDateMedication = req.body.finalDateMedication,
+		clinicHistory.allergies = req.body.allergies,
 
-		nhcs.save(function(err) {
+		clinicHistory.save(function(err) {
 			if(err) return res.status(500).send(err.message);
-      res.status(200).jsonp(nhcs);
+			res.status(200).jsonp(clinicHistory);
 		});
 	});
 };
 
-//DELETE - Delete a Patient with specified ID
-exports.deletePatient = function(req, res) {
-	ClinicHist.findById(req.params.nhc, function(err, nhcs) {
-		nhcs.remove(function(err) {
-			if(err) return res.status(500).send(err.message);
-      res.status(200).send();
-		})
+//DELETE - Delete a clinic history with specified ID
+exports.deleteClinicHistory = function(req, res) {
+	ClinicHist.remove({ _id: req.params.id }, function (err) {
+		if(err) return res.status(500).send(err.message);
+		res.status(200).send("El historial clínico ha sido borrado.");
+	});
+};
+
+//GET - Return all clinic historials in the DB
+exports.findAllClinicHistorials = function(req, res) {
+	ClinicHist.find(function(err, clinicHistory) {
+		if(err) res.send(500, err.message);
+
+		console.log('GET /clinichistory')
+		res.status(200).jsonp(clinicHistory);
+	});
+};
+
+//GET - Return a clinic history with specified ID
+exports.findById = function(req, res) {
+	ClinicHist.findById(req.params.id, function(err, clinicHistory) {
+		if(err) return res.send(500, err.message);
+
+		console.log('GET /clinichistory/' + req.params.id);
+		res.status(200).jsonp(clinicHistory);
 	});
 };

@@ -1,7 +1,6 @@
 //File: controllers/patient.js
 var mongoose = require('mongoose');
-var Patients  = mongoose.model('Patient');
-
+var Patients  = require('../models/patient');
 
 //POST - Insert a new patient in the DB
 exports.addPatient = function(req, res) {

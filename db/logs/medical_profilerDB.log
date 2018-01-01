@@ -1,77 +1,55 @@
-2018-01-01T11:53:39.999+0100 I CONTROL  [main] Trying to start Windows service 'MongoDB'
-2018-01-01T11:53:40.000+0100 I CONTROL  [initandlisten] MongoDB starting : pid=1036 port=27017 dbpath=C:\Users\laura\Desktop\UniversidadUAH\ComputaciÃ³n ubicua\Pec2\medical_profiler\db\data\ 64-bit host=DESKTOP-O175VNR
-2018-01-01T11:53:40.000+0100 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
-2018-01-01T11:53:40.000+0100 I CONTROL  [initandlisten] db version v3.6.0
-2018-01-01T11:53:40.000+0100 I CONTROL  [initandlisten] git version: a57d8e71e6998a2d0afde7edc11bd23e5661c915
-2018-01-01T11:53:40.010+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
-2018-01-01T11:53:40.010+0100 I CONTROL  [initandlisten] allocator: tcmalloc
-2018-01-01T11:53:40.010+0100 I CONTROL  [initandlisten] modules: none
-2018-01-01T11:53:40.010+0100 I CONTROL  [initandlisten] build environment:
-2018-01-01T11:53:40.010+0100 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
-2018-01-01T11:53:40.010+0100 I CONTROL  [initandlisten]     distarch: x86_64
-2018-01-01T11:53:40.010+0100 I CONTROL  [initandlisten]     target_arch: x86_64
-2018-01-01T11:53:40.011+0100 I CONTROL  [initandlisten] options: { config: "c:\mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, service: true, storage: { dbPath: "C:\Users\laura\Desktop\UniversidadUAH\ComputaciÃ³n ubicua\Pec2\medical_profiler\db\data\", journal: { enabled: true } }, systemLog: { component: { accessControl: { verbosity: 0 }, command: { verbosity: 0 } }, destination: "file", logAppend: false, logRotate: "rename", path: "C:\Users\laura\Desktop\UniversidadUAH\ComputaciÃ³n ubicua\Pec2\medical_profiler\db\logs\medical_profilerDB.log", quiet: false, timeStampFormat: "iso8601-local" } }
-2018-01-01T11:53:40.016+0100 I -        [initandlisten] Detected data files in C:\Users\laura\Desktop\UniversidadUAH\ComputaciÃ³n ubicua\Pec2\medical_profiler\db\data\ created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
-2018-01-01T11:53:40.016+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3541M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
-2018-01-01T11:53:40.542+0100 I STORAGE  [initandlisten] WiredTiger message [1514804020:541486][1036:140720775192912], txn-recover: Main recovery loop: starting at 3/101376
-2018-01-01T11:53:40.783+0100 I STORAGE  [initandlisten] WiredTiger message [1514804020:782687][1036:140720775192912], txn-recover: Recovering log 3 through 4
-2018-01-01T11:53:41.034+0100 I STORAGE  [initandlisten] WiredTiger message [1514804021:33866][1036:140720775192912], txn-recover: Recovering log 4 through 4
-2018-01-01T11:53:42.043+0100 I CONTROL  [initandlisten] 
-2018-01-01T11:53:42.044+0100 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
-2018-01-01T11:53:42.044+0100 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
-2018-01-01T11:53:42.044+0100 I CONTROL  [initandlisten] 
-2018-01-01T11:53:42.044+0100 I CONTROL  [initandlisten] 
-2018-01-01T11:53:42.044+0100 I CONTROL  [initandlisten] ** WARNING: The file system cache of this machine is configured to be greater than 40% of the total memory. This can lead to increased memory pressure and poor performance.
-2018-01-01T11:53:42.044+0100 I CONTROL  [initandlisten] See http://dochub.mongodb.org/core/wt-windows-system-file-cache
-2018-01-01T11:53:42.044+0100 I CONTROL  [initandlisten] 
-2018-01-01T11:53:43.981+0100 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontrÃ³ en el equipo.' for counter '\Memory\Available Bytes'
-2018-01-01T11:53:43.981+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/laura/Desktop/UniversidadUAH/ComputaciÃ³n ubicua/Pec2/medical_profiler/db/data/diagnostic.data'
-2018-01-01T11:53:44.044+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
-2018-01-01T11:53:44.044+0100 I STORAGE  [initandlisten] Service running
-2018-01-01T11:55:11.412+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53582 #1 (1 connection now open)
-2018-01-01T11:55:11.422+0100 I NETWORK  [conn1] received client metadata from 127.0.0.1:53582 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
-2018-01-01T11:55:26.805+0100 I NETWORK  [conn1] end connection 127.0.0.1:53582 (0 connections now open)
-2018-01-01T11:55:27.879+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53583 #2 (1 connection now open)
-2018-01-01T11:55:27.888+0100 I NETWORK  [conn2] received client metadata from 127.0.0.1:53583 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
-2018-01-01T11:55:36.953+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53591 #3 (2 connections now open)
-2018-01-01T11:55:37.442+0100 I COMMAND  [conn3] command medical_reports.doctors command: find { find: "doctors", filter: { _id: ObjectId('5a49030225effd1a6001e4a0') }, projection: {}, limit: 1, singleBatch: true, batchSize: 1, $db: "medical_reports" } planSummary: IDHACK keysExamined:1 docsExamined:1 cursorExhausted:1 numYields:0 nreturned:1 reslen:316 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_query 166ms
-2018-01-01T12:03:30.583+0100 I NETWORK  [conn3] end connection 127.0.0.1:53591 (0 connections now open)
-2018-01-01T12:03:30.583+0100 I NETWORK  [conn2] end connection 127.0.0.1:53583 (1 connection now open)
-2018-01-01T12:03:31.644+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53810 #4 (1 connection now open)
-2018-01-01T12:03:31.653+0100 I NETWORK  [conn4] received client metadata from 127.0.0.1:53810 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
-2018-01-01T12:03:36.726+0100 I NETWORK  [conn4] end connection 127.0.0.1:53810 (0 connections now open)
-2018-01-01T12:03:37.825+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53811 #5 (1 connection now open)
-2018-01-01T12:03:37.840+0100 I NETWORK  [conn5] received client metadata from 127.0.0.1:53811 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
-2018-01-01T12:09:18.540+0100 I NETWORK  [conn5] end connection 127.0.0.1:53811 (0 connections now open)
-2018-01-01T12:15:45.323+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53886 #6 (1 connection now open)
-2018-01-01T12:15:45.334+0100 I NETWORK  [conn6] received client metadata from 127.0.0.1:53886 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
-2018-01-01T12:15:52.546+0100 I NETWORK  [conn6] end connection 127.0.0.1:53886 (0 connections now open)
-2018-01-01T12:16:07.613+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53888 #7 (1 connection now open)
-2018-01-01T12:16:07.623+0100 I NETWORK  [conn7] received client metadata from 127.0.0.1:53888 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
-2018-01-01T12:21:27.708+0100 I NETWORK  [conn7] end connection 127.0.0.1:53888 (0 connections now open)
-2018-01-01T12:21:28.793+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53914 #8 (1 connection now open)
-2018-01-01T12:21:28.803+0100 I NETWORK  [conn8] received client metadata from 127.0.0.1:53914 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
-2018-01-01T12:21:53.758+0100 I NETWORK  [conn8] end connection 127.0.0.1:53914 (0 connections now open)
-2018-01-01T12:21:59.262+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53917 #9 (1 connection now open)
-2018-01-01T12:21:59.271+0100 I NETWORK  [conn9] received client metadata from 127.0.0.1:53917 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
-2018-01-01T12:22:38.149+0100 I NETWORK  [conn9] end connection 127.0.0.1:53917 (0 connections now open)
-2018-01-01T12:22:39.436+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53920 #10 (1 connection now open)
-2018-01-01T12:22:39.445+0100 I NETWORK  [conn10] received client metadata from 127.0.0.1:53920 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
-2018-01-01T12:23:34.728+0100 I COMMAND  [conn10] command medical_reports.doctors command: find { find: "doctors", filter: { email: "doctor1@doctor.es" }, projection: {}, limit: 1, singleBatch: true, batchSize: 1, $db: "medical_reports" } planSummary: IXSCAN { email: 1 } keysExamined:1 docsExamined:1 cursorExhausted:1 numYields:0 nreturned:1 reslen:313 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_query 170ms
-2018-01-01T12:31:05.221+0100 I NETWORK  [conn10] end connection 127.0.0.1:53920 (0 connections now open)
-2018-01-01T12:31:06.379+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53951 #11 (1 connection now open)
-2018-01-01T12:31:06.388+0100 I NETWORK  [conn11] received client metadata from 127.0.0.1:53951 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
-2018-01-01T12:32:21.688+0100 I NETWORK  [conn11] end connection 127.0.0.1:53951 (0 connections now open)
-2018-01-01T12:32:22.745+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53953 #12 (1 connection now open)
-2018-01-01T12:32:22.756+0100 I NETWORK  [conn12] received client metadata from 127.0.0.1:53953 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
-2018-01-01T12:38:45.683+0100 I WRITE    [conn12] update medical_reports.patients command: { q: { _id: ObjectId('5a463c04e6da6b3f50e805af'), __v: 2 }, u: { $set: { diseases: [ "Postillas" ] }, $inc: { __v: 1 } }, multi: false, upsert: false } planSummary: IXSCAN { _id: 1 } keysExamined:1 docsExamined:1 nMatched:1 nModified:1 numYields:1 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2 } }, Collection: { acquireCount: { w: 2 } } } 150ms
-2018-01-01T12:38:45.684+0100 I COMMAND  [conn12] command medical_reports.$cmd command: update { update: "patients", ordered: true, $db: "medical_reports" } numYields:0 reslen:59 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2 } }, Collection: { acquireCount: { w: 2 } } } protocol:op_query 245ms
-2018-01-01T12:39:07.830+0100 I NETWORK  [conn12] end connection 127.0.0.1:53953 (0 connections now open)
-2018-01-01T12:39:49.661+0100 I CONTROL  [serviceShutdown] got SERVICE_CONTROL_STOP request from Windows Service Control Manager, will terminate after current cmd ends
-2018-01-01T12:39:49.685+0100 I NETWORK  [serviceShutdown] shutdown: going to close listening sockets...
-2018-01-01T12:39:49.685+0100 F CONTROL  [thread13] Encountered an error in PeriodicRunnerASIO: La operación de E/S se anuló por una salida de subproceso o por una solicitud de aplicación.
-2018-01-01T12:39:49.685+0100 F CONTROL  [thread13] Encountered an error in PeriodicRunnerASIO: La operación de E/S se anuló por una salida de subproceso o por una solicitud de aplicación.
-2018-01-01T12:39:49.686+0100 I FTDC     [serviceShutdown] Shutting down full-time diagnostic data capture
-2018-01-01T12:39:49.693+0100 I STORAGE  [serviceShutdown] WiredTigerKVEngine shutting down
-2018-01-01T12:39:50.287+0100 I STORAGE  [serviceShutdown] shutdown: removing fs lock...
-2018-01-01T12:39:50.288+0100 I CONTROL  [serviceShutdown] now exiting
+2018-01-01T19:54:24.994+0100 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2018-01-01T19:54:24.995+0100 I CONTROL  [initandlisten] MongoDB starting : pid=20612 port=27017 dbpath=C:\Users\laura\Desktop\UniversidadUAH\ComputaciÃ³n ubicua\Pec2\medical_profiler\db\data\ 64-bit host=DESKTOP-O175VNR
+2018-01-01T19:54:24.995+0100 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2018-01-01T19:54:24.995+0100 I CONTROL  [initandlisten] db version v3.6.0
+2018-01-01T19:54:24.996+0100 I CONTROL  [initandlisten] git version: a57d8e71e6998a2d0afde7edc11bd23e5661c915
+2018-01-01T19:54:24.997+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2018-01-01T19:54:24.997+0100 I CONTROL  [initandlisten] allocator: tcmalloc
+2018-01-01T19:54:24.997+0100 I CONTROL  [initandlisten] modules: none
+2018-01-01T19:54:24.997+0100 I CONTROL  [initandlisten] build environment:
+2018-01-01T19:54:24.997+0100 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2018-01-01T19:54:24.997+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2018-01-01T19:54:24.997+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-01-01T19:54:24.997+0100 I CONTROL  [initandlisten] options: { config: "c:\mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, service: true, storage: { dbPath: "C:\Users\laura\Desktop\UniversidadUAH\ComputaciÃ³n ubicua\Pec2\medical_profiler\db\data\", journal: { enabled: true } }, systemLog: { component: { accessControl: { verbosity: 0 }, command: { verbosity: 0 } }, destination: "file", logAppend: false, logRotate: "rename", path: "C:\Users\laura\Desktop\UniversidadUAH\ComputaciÃ³n ubicua\Pec2\medical_profiler\db\logs\medical_profilerDB.log", quiet: false, timeStampFormat: "iso8601-local" } }
+2018-01-01T19:54:24.999+0100 I -        [initandlisten] Detected data files in C:\Users\laura\Desktop\UniversidadUAH\ComputaciÃ³n ubicua\Pec2\medical_profiler\db\data\ created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2018-01-01T19:54:24.999+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3541M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2018-01-01T19:54:25.415+0100 I STORAGE  [initandlisten] WiredTiger message [1514832865:415163][20612:140720775192912], txn-recover: Main recovery loop: starting at 4/17024
+2018-01-01T19:54:25.561+0100 I STORAGE  [initandlisten] WiredTiger message [1514832865:561287][20612:140720775192912], txn-recover: Recovering log 4 through 5
+2018-01-01T19:54:25.740+0100 I STORAGE  [initandlisten] WiredTiger message [1514832865:740394][20612:140720775192912], txn-recover: Recovering log 5 through 5
+2018-01-01T19:54:26.339+0100 I CONTROL  [initandlisten] 
+2018-01-01T19:54:26.341+0100 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-01-01T19:54:26.341+0100 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-01-01T19:54:26.341+0100 I CONTROL  [initandlisten] 
+2018-01-01T19:54:26.341+0100 I CONTROL  [initandlisten] 
+2018-01-01T19:54:26.341+0100 I CONTROL  [initandlisten] ** WARNING: The file system cache of this machine is configured to be greater than 40% of the total memory. This can lead to increased memory pressure and poor performance.
+2018-01-01T19:54:26.341+0100 I CONTROL  [initandlisten] See http://dochub.mongodb.org/core/wt-windows-system-file-cache
+2018-01-01T19:54:26.342+0100 I CONTROL  [initandlisten] 
+2018-01-01T19:54:26.672+0100 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontrÃ³ en el equipo.' for counter '\Memory\Available Bytes'
+2018-01-01T19:54:26.672+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/laura/Desktop/UniversidadUAH/ComputaciÃ³n ubicua/Pec2/medical_profiler/db/data/diagnostic.data'
+2018-01-01T19:54:26.673+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2018-01-01T19:54:26.673+0100 I STORAGE  [initandlisten] Service running
+2018-01-01T19:54:42.849+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:54455 #1 (1 connection now open)
+2018-01-01T19:54:42.857+0100 I NETWORK  [conn1] received client metadata from 127.0.0.1:54455 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
+2018-01-01T19:55:03.946+0100 I NETWORK  [conn1] end connection 127.0.0.1:54455 (0 connections now open)
+2018-01-01T19:55:04.800+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:54456 #2 (1 connection now open)
+2018-01-01T19:55:04.808+0100 I NETWORK  [conn2] received client metadata from 127.0.0.1:54456 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
+2018-01-01T19:59:18.510+0100 I NETWORK  [conn2] end connection 127.0.0.1:54456 (0 connections now open)
+2018-01-01T19:59:19.421+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:54463 #3 (1 connection now open)
+2018-01-01T19:59:19.428+0100 I NETWORK  [conn3] received client metadata from 127.0.0.1:54463 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
+2018-01-01T19:59:26.875+0100 I NETWORK  [conn3] end connection 127.0.0.1:54463 (0 connections now open)
+2018-01-01T19:59:27.741+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:54464 #4 (1 connection now open)
+2018-01-01T19:59:27.748+0100 I NETWORK  [conn4] received client metadata from 127.0.0.1:54464 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
+2018-01-01T20:07:22.403+0100 I NETWORK  [conn4] end connection 127.0.0.1:54464 (0 connections now open)
+2018-01-01T20:12:59.218+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:54494 #5 (1 connection now open)
+2018-01-01T20:12:59.225+0100 I NETWORK  [conn5] received client metadata from 127.0.0.1:54494 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
+2018-01-01T20:13:07.950+0100 I STORAGE  [conn5] createCollection: medical_reports.clinichistories with generated UUID: 54d59169-56f1-464c-aaa8-bff36653e6a8
+2018-01-01T20:13:08.107+0100 I COMMAND  [conn5] command medical_reports.clinichistories command: insert { insert: "clinichistories", ordered: false, $db: "medical_reports" } ninserted:1 keysInserted:1 numYields:0 reslen:44 locks:{ Global: { acquireCount: { r: 3, w: 3 } }, Database: { acquireCount: { w: 2, W: 1 } }, Collection: { acquireCount: { w: 2 } } } protocol:op_query 173ms
+2018-01-01T20:25:04.479+0100 I NETWORK  [conn5] end connection 127.0.0.1:54494 (0 connections now open)
+2018-01-01T20:25:21.097+0100 I CONTROL  [serviceShutdown] got SERVICE_CONTROL_STOP request from Windows Service Control Manager, will terminate after current cmd ends
+2018-01-01T20:25:21.097+0100 I NETWORK  [serviceShutdown] shutdown: going to close listening sockets...
+2018-01-01T20:25:21.098+0100 F CONTROL  [thread6] Encountered an error in PeriodicRunnerASIO: La operación de E/S se anuló por una salida de subproceso o por una solicitud de aplicación.
+2018-01-01T20:25:21.098+0100 F CONTROL  [thread6] Encountered an error in PeriodicRunnerASIO: La operación de E/S se anuló por una salida de subproceso o por una solicitud de aplicación.
+2018-01-01T20:25:21.098+0100 I FTDC     [serviceShutdown] Shutting down full-time diagnostic data capture
+2018-01-01T20:25:21.106+0100 I STORAGE  [serviceShutdown] WiredTigerKVEngine shutting down
+2018-01-01T20:25:21.560+0100 I STORAGE  [serviceShutdown] shutdown: removing fs lock...
+2018-01-01T20:25:21.561+0100 I CONTROL  [serviceShutdown] now exiting
