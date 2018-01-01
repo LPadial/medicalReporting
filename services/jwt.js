@@ -10,6 +10,7 @@ exports.createToken = function(doctor){
     email: doctor.email,
     password: doctor.password,
     speciality: doctor.speciality,
+    role: doctor.role,
     initTime: moment().unix(),
     expireTime: moment().add(30, 'days').unix()
   };

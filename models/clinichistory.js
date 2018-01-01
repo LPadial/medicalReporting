@@ -15,4 +15,12 @@ var historySchema = new Schema({
   }
 });
 
+historySchema.pre('validate', function (next) {
+  if (this.initDateMedication > this.finalDateMedication) {
+    this.invalidate('initDateMedication', 'La fecha final debe ser posterior a la fecha inicial.', this.initDateMedication);
+  }
+
+  next();
+});
+
 module.exports = mongoose.model('ClinicHistory', historySchema);

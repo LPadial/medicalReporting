@@ -14,7 +14,8 @@ exports.addDoctor = function(req, res) {
 		password : req.body.password,
 		name : req.body.name,
 		surname : req.body.surname,
-		speciality : req.body.speciality
+		speciality : req.body.speciality,
+		role : req.body.role
 	});
 
 	if(req.body.password){
@@ -36,6 +37,7 @@ exports.updateDoctor = function(req, res) {
 		doctor.name = req.body.name;
 		doctor.surname = req.body.surname;
 		doctor.speciality = req.body.speciality;
+		doctor.role = req.body.role;
 
 		if(req.body.password){
 			bcrypt.hash(req.body.password, 5, (err, hash) =>{

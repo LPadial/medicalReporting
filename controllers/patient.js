@@ -8,16 +8,17 @@ exports.addPatient = function(req, res) {
 	console.log(req.body);
 
 	var patient = new Patients({
-		name: 	    	req.body.name,
-		surname:    	req.body.surname,
-		dateOfBirth: 	req.body.dateOfBirth,
-		address:    	req.body.address,
-		telephone:  	req.body.telephone,
-		gender:     	req.body.gender,
-		nhc:        	req.body.nhc,
-		ssnumber:   	req.body.ssnumber,
-		diseases:			req.body.diseases,
-		doctors:  		req.body.doctors
+		name: req.body.name,
+		surname: req.body.surname,
+		room: req.body.room,
+		dateOfBirth: req.body.dateOfBirth,
+		address: req.body.address,
+		telephone: req.body.telephone,
+		gender:	req.body.gender,
+		nhc: req.body.nhc,
+		ssnumber: req.body.ssnumber,
+		diseases:	req.body.diseases,
+		doctors: req.body.doctors
 	});
 
 	patient.save(function(err, patient) {
@@ -31,6 +32,7 @@ exports.updatePatient = function(req, res) {
 	Patients.findById(req.params.id, function(err, patient) {
 		patient.name = req.body.name;
 		patient.surname = req.body.surname;
+		patient.room = req.body.room;
 		patient.dateOfBirth = req.body.dateOfBirth;
 		patient.address = req.body.address;
 		patient.telephone = req.body.telephone;
@@ -71,6 +73,16 @@ exports.findById = function(req, res) {
 		if(err) return res.send(500, err.message);
 
 		console.log('GET /patients/' + req.params.id);
+		res.status(200).jsonp(patients);
+	});
+};
+
+//GET - Return patients for a doctor
+exports.findMyPatients = function(req, res){
+	Patients.find({ 'doctors': req.doctor.id}, function (err, patients) {
+		if(err) return res.send(500, err.message);
+
+		console.log('GET /patients/'+req.doctor.id);
 		res.status(200).jsonp(patients);
 	});
 };

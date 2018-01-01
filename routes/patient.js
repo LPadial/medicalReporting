@@ -5,7 +5,7 @@ var api = express.Router();
 var md_checkLogin = require('../middlewares/authenticated');
 
 api.route('/patients')
-  .get(md_checkLogin.ensureAuth, patientsController.findAllPatients)
+  .get(md_checkLogin.ensureAuth, patientsController.findMyPatients)
   .post(md_checkLogin.ensureAuth, patientsController.addPatient);
 
 api.route('/patients/:id')

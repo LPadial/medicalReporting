@@ -10,6 +10,9 @@ var patientSchema = new Schema({
     type: String,
     required: true
   },
+  room: {
+    type: String,
+  },
   dateOfBirth: {
     type: Date,
     required: true

@@ -50,13 +50,14 @@ exports.findAllClinicHistorials = function(req, res) {
 	ClinicHist.find(function(err, clinicHistory) {
 		if(err) res.send(500, err.message);
 
-		console.log('GET /clinichistory')
+		console.log('GET /clinichistory');
 		res.status(200).jsonp(clinicHistory);
 	});
 };
 
 //GET - Return a clinic history with specified ID
 exports.findById = function(req, res) {
+	console.log(req.doctor);
 	ClinicHist.findById(req.params.id, function(err, clinicHistory) {
 		if(err) return res.send(500, err.message);
 
