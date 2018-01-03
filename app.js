@@ -25,10 +25,15 @@ var doctor_routes = require('./routes/doctor');
 // Clinic History routes
 var clinicHistory_routes = require('./routes/clinichistory');
 
+// NFC routes
+var nfc_routes = require('./routes/nfc');
+
+
 //You can access to the routes with this links
 app.use('/medical_reports', patient_routes);
 app.use('/medical_reports', doctor_routes);
 app.use('/medical_reports', clinicHistory_routes);
+app.use('/medical_reports', nfc_routes);
 
 //Start node server
 app.listen(3000, function() {

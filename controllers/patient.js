@@ -86,3 +86,13 @@ exports.findMyPatients = function(req, res){
 		res.status(200).jsonp(patients);
 	});
 };
+
+//GET - Return patients in a room for a doctor
+exports.findMyPatientsRoom = function(req, res){
+	Patients.find({ 'doctors': req.doctor.id, 'room': req.params.room}, function (err, patients) {
+		if(err) return res.send(500, err.message);
+
+		console.log('GET /patients/'+req.doctor.id+'/'+req.body.room);
+		res.status(200).jsonp(patients);
+	});
+};
