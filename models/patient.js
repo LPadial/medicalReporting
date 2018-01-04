@@ -60,7 +60,12 @@ var patientSchema = new Schema({
       type: Schema.Types.ObjectId,
       ref: 'Doctor'
     }
-  ]
+  ],
+  code_rfid:{
+    type: String,
+    unique: true,
+    required: true
+  }
 });
 
 module.exports = mongoose.model('Patient', patientSchema);

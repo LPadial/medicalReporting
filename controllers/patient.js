@@ -18,7 +18,8 @@ exports.addPatient = function(req, res) {
 		nhc: req.body.nhc,
 		ssnumber: req.body.ssnumber,
 		diseases:	req.body.diseases,
-		doctors: req.body.doctors
+		doctors: req.body.doctors,
+		code_rfid: req.body.code_rfid
 	});
 
 	patient.save(function(err, patient) {
@@ -41,6 +42,7 @@ exports.updatePatient = function(req, res) {
 		patient.ssnumber =	req.body.ssnumber;
 		patient.diseases = req.body.diseases;
 		patient.doctors = req.body.doctors;
+		patient.code_rfid = req.body.code_rfid;
 
 		patient.save(function(err) {
 			if(err) return res.status(500).send(err.message);
