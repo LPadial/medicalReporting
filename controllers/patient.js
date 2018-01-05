@@ -98,3 +98,11 @@ exports.findMyPatientsRoom = function(req, res){
 		res.status(200).jsonp(patients);
 	});
 };
+
+//GET - Return patient with a code_rfid
+exports.findPatientByRfid = function(req, res){
+	Patients.find({ 'code_rfid': req.params.code_rfid}, function (err, patients) {
+		if(err) return res.send(500, err.message);
+		res.status(200).jsonp(patients);
+	});
+};

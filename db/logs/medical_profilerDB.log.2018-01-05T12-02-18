@@ -1,0 +1,48 @@
+2018-01-03T20:13:31.599+0100 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2018-01-03T20:13:31.600+0100 I CONTROL  [initandlisten] MongoDB starting : pid=4012 port=27017 dbpath=C:\Users\laura\Desktop\UniversidadUAH\ComputaciÃ³n ubicua\Pec2\medical_profiler\db\data\ 64-bit host=DESKTOP-O175VNR
+2018-01-03T20:13:31.600+0100 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2018-01-03T20:13:31.600+0100 I CONTROL  [initandlisten] db version v3.6.0
+2018-01-03T20:13:31.600+0100 I CONTROL  [initandlisten] git version: a57d8e71e6998a2d0afde7edc11bd23e5661c915
+2018-01-03T20:13:31.620+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2018-01-03T20:13:31.620+0100 I CONTROL  [initandlisten] allocator: tcmalloc
+2018-01-03T20:13:31.620+0100 I CONTROL  [initandlisten] modules: none
+2018-01-03T20:13:31.620+0100 I CONTROL  [initandlisten] build environment:
+2018-01-03T20:13:31.620+0100 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2018-01-03T20:13:31.620+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2018-01-03T20:13:31.620+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-01-03T20:13:31.627+0100 I CONTROL  [initandlisten] options: { config: "c:\mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, service: true, storage: { dbPath: "C:\Users\laura\Desktop\UniversidadUAH\ComputaciÃ³n ubicua\Pec2\medical_profiler\db\data\", journal: { enabled: true } }, systemLog: { component: { accessControl: { verbosity: 0 }, command: { verbosity: 0 } }, destination: "file", logAppend: false, logRotate: "rename", path: "C:\Users\laura\Desktop\UniversidadUAH\ComputaciÃ³n ubicua\Pec2\medical_profiler\db\logs\medical_profilerDB.log", quiet: false, timeStampFormat: "iso8601-local" } }
+2018-01-03T20:13:31.980+0100 I -        [initandlisten] Detected data files in C:\Users\laura\Desktop\UniversidadUAH\ComputaciÃ³n ubicua\Pec2\medical_profiler\db\data\ created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2018-01-03T20:13:31.981+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3541M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2018-01-03T20:13:33.187+0100 I STORAGE  [initandlisten] WiredTiger message [1515006813:186592][4012:140706168660304], txn-recover: Main recovery loop: starting at 7/30464
+2018-01-03T20:13:33.317+0100 I STORAGE  [initandlisten] WiredTiger message [1515006813:316685][4012:140706168660304], txn-recover: Recovering log 7 through 8
+2018-01-03T20:13:33.517+0100 I STORAGE  [initandlisten] WiredTiger message [1515006813:516981][4012:140706168660304], txn-recover: Recovering log 8 through 8
+2018-01-03T20:13:35.340+0100 I CONTROL  [initandlisten] 
+2018-01-03T20:13:35.340+0100 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-01-03T20:13:35.340+0100 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-01-03T20:13:35.340+0100 I CONTROL  [initandlisten] 
+2018-01-03T20:13:35.340+0100 I CONTROL  [initandlisten] 
+2018-01-03T20:13:35.340+0100 I CONTROL  [initandlisten] ** WARNING: The file system cache of this machine is configured to be greater than 40% of the total memory. This can lead to increased memory pressure and poor performance.
+2018-01-03T20:13:35.340+0100 I CONTROL  [initandlisten] See http://dochub.mongodb.org/core/wt-windows-system-file-cache
+2018-01-03T20:13:35.340+0100 I CONTROL  [initandlisten] 
+2018-01-03T20:14:09.476+0100 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontrÃ³ en el equipo.' for counter '\Memory\Available Bytes'
+2018-01-03T20:14:09.476+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/laura/Desktop/UniversidadUAH/ComputaciÃ³n ubicua/Pec2/medical_profiler/db/data/diagnostic.data'
+2018-01-03T20:14:09.724+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2018-01-03T20:14:09.724+0100 I STORAGE  [initandlisten] Service running
+2018-01-04T14:21:23.313+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:49675 #1 (1 connection now open)
+2018-01-04T14:21:23.365+0100 I NETWORK  [conn1] received client metadata from 127.0.0.1:49675 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
+2018-01-04T14:21:23.391+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:49676 #2 (2 connections now open)
+2018-01-04T14:21:23.854+0100 I INDEX    [conn1] build index on: medical_reports.patients properties: { v: 2, unique: true, key: { code_rfid: 1 }, name: "code_rfid_1", ns: "medical_reports.patients", background: true }
+2018-01-04T14:21:23.923+0100 I COMMAND  [conn2] command medical_reports.doctors command: listIndexes { listIndexes: "doctors", cursor: {}, $db: "medical_reports" } numYields:0 reslen:317 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 1 }, acquireWaitCount: { r: 1 }, timeAcquiringMicros: { r: 473674 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_query 473ms
+2018-01-04T14:21:24.222+0100 I COMMAND  [conn1] command medical_reports.$cmd command: createIndexes { createIndexes: "patients", indexes: [ { name: "code_rfid_1", key: { code_rfid: 1 }, unique: true, background: true } ], $db: "medical_reports" } exception: E11000 duplicate key error collection: medical_reports.patients index: code_rfid_1 dup key: { : null } code:DuplicateKey numYields:1 reslen:189 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 2 } }, Collection: { acquireCount: { w: 2 } } } protocol:op_query 829ms
+2018-01-04T14:25:02.027+0100 I WRITE    [conn1] update medical_reports.patients command: { q: { _id: ObjectId('5a4aa669e396c40208647fbc'), __v: 2 }, u: { $set: { code_rfid: "54321", nhc: [ ObjectId('5a4a889d94c73f1a1436d84c') ] }, $inc: { __v: 1 } }, multi: false, upsert: false } planSummary: IXSCAN { _id: 1 } keysExamined:1 docsExamined:1 nMatched:1 nModified:1 numYields:1 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2 } }, Collection: { acquireCount: { w: 2 } } } 149ms
+2018-01-04T14:25:02.027+0100 I COMMAND  [conn1] command medical_reports.$cmd command: update { update: "patients", ordered: true, $db: "medical_reports" } numYields:0 reslen:59 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2 } }, Collection: { acquireCount: { w: 2 } } } protocol:op_query 160ms
+2018-01-04T14:25:41.123+0100 I NETWORK  [conn2] end connection 127.0.0.1:49676 (1 connection now open)
+2018-01-04T14:25:41.123+0100 I NETWORK  [conn1] end connection 127.0.0.1:49675 (0 connections now open)
+2018-01-04T14:26:00.773+0100 I CONTROL  [serviceShutdown] got SERVICE_CONTROL_STOP request from Windows Service Control Manager, will terminate after current cmd ends
+2018-01-04T14:26:00.803+0100 I NETWORK  [serviceShutdown] shutdown: going to close listening sockets...
+2018-01-04T14:26:00.804+0100 F CONTROL  [thread3] Encountered an error in PeriodicRunnerASIO: La operación de E/S se anuló por una salida de subproceso o por una solicitud de aplicación.
+2018-01-04T14:26:00.804+0100 F CONTROL  [thread3] Encountered an error in PeriodicRunnerASIO: La operación de E/S se anuló por una salida de subproceso o por una solicitud de aplicación.
+2018-01-04T14:26:00.811+0100 I FTDC     [serviceShutdown] Shutting down full-time diagnostic data capture
+2018-01-04T14:26:00.830+0100 I STORAGE  [serviceShutdown] WiredTigerKVEngine shutting down
+2018-01-04T14:26:01.359+0100 I STORAGE  [serviceShutdown] shutdown: removing fs lock...
+2018-01-04T14:26:01.360+0100 I CONTROL  [serviceShutdown] now exiting
