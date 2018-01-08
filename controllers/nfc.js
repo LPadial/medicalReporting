@@ -10,7 +10,8 @@ exports.addNFC = function(req, res) {
 	var nfc = new Nfcs({
 		doctor : req.body.doctor,
 		room : req.body.room,
-		time:  new Date()
+		//time:  new Date()
+		time: moment().unix()
 	});
 
 	nfc.save(function(err, nfc) {
