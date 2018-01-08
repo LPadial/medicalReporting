@@ -7,12 +7,12 @@ var nfcSchema = new Schema({
     ref: 'Doctor',
     required: true
   },
-  room:{
+  room: {
     type: String,
     required: true
   },
   time: {
-    type: Date
+    type: String
   }
 });
 

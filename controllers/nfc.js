@@ -10,7 +10,7 @@ exports.addNFC = function(req, res) {
 	var nfc = new Nfcs({
 		doctor : req.body.doctor,
 		room : req.body.room,
-		time: moment().unix()
+		time:  new Date()
 	});
 
 	nfc.save(function(err, nfc) {
@@ -23,6 +23,14 @@ exports.addNFC = function(req, res) {
 exports.findById = function(req, res) {
 	Nfcs.findById(req.params.id, function(err, nfc) {
 		if(err) return res.send(500, err.message);
+		res.status(200).jsonp(nfc);
+	});
+};
+
+//GET - Return all nfc in the DB
+exports.findAllNfcs = function(req, res) {
+	Nfcs.find(function(err, nfc) {
+		if(err) res.send(500, err.message);
 		res.status(200).jsonp(nfc);
 	});
 };

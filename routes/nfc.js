@@ -13,4 +13,8 @@ api.route('/nfc/:id')
 api.route('/nfcDoctor')
 .get(md_checkLogin.ensureAuth, nfcController.findNFCDoctor);
 
+api.route('/nfcs')
+.get(md_checkLogin.ensureAuth, nfcController.findAllNfcs);
+
+
 module.exports = api;
