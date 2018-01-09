@@ -1,0 +1,69 @@
+2018-01-08T21:21:33.791+0100 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2018-01-08T21:21:33.792+0100 I CONTROL  [initandlisten] MongoDB starting : pid=3896 port=27017 dbpath=C:\Users\laura\Desktop\UniversidadUAH\ComputaciÃ³n ubicua\Pec2\medical_profiler\db\data\ 64-bit host=DESKTOP-O175VNR
+2018-01-08T21:21:33.792+0100 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2018-01-08T21:21:33.792+0100 I CONTROL  [initandlisten] db version v3.6.0
+2018-01-08T21:21:33.792+0100 I CONTROL  [initandlisten] git version: a57d8e71e6998a2d0afde7edc11bd23e5661c915
+2018-01-08T21:21:33.813+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2018-01-08T21:21:33.813+0100 I CONTROL  [initandlisten] allocator: tcmalloc
+2018-01-08T21:21:33.813+0100 I CONTROL  [initandlisten] modules: none
+2018-01-08T21:21:33.813+0100 I CONTROL  [initandlisten] build environment:
+2018-01-08T21:21:33.813+0100 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2018-01-08T21:21:33.813+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2018-01-08T21:21:33.813+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-01-08T21:21:33.813+0100 I CONTROL  [initandlisten] options: { config: "c:\mongod.conf", net: { bindIp: "127.0.0.1", port: 27017 }, service: true, storage: { dbPath: "C:\Users\laura\Desktop\UniversidadUAH\ComputaciÃ³n ubicua\Pec2\medical_profiler\db\data\", journal: { enabled: true } }, systemLog: { component: { accessControl: { verbosity: 0 }, command: { verbosity: 0 } }, destination: "file", logAppend: false, logRotate: "rename", path: "C:\Users\laura\Desktop\UniversidadUAH\ComputaciÃ³n ubicua\Pec2\medical_profiler\db\logs\medical_profilerDB.log", quiet: false, timeStampFormat: "iso8601-local" } }
+2018-01-08T21:21:33.824+0100 I -        [initandlisten] Detected data files in C:\Users\laura\Desktop\UniversidadUAH\ComputaciÃ³n ubicua\Pec2\medical_profiler\db\data\ created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2018-01-08T21:21:33.824+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3541M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2018-01-08T21:21:34.455+0100 I STORAGE  [initandlisten] WiredTiger message [1515442894:455288][3896:140710962946384], txn-recover: Main recovery loop: starting at 12/64384
+2018-01-08T21:21:34.876+0100 I STORAGE  [initandlisten] WiredTiger message [1515442894:876586][3896:140710962946384], txn-recover: Recovering log 12 through 13
+2018-01-08T21:21:35.356+0100 I STORAGE  [initandlisten] WiredTiger message [1515442895:355922][3896:140710962946384], txn-recover: Recovering log 13 through 13
+2018-01-08T21:21:35.974+0100 I CONTROL  [initandlisten] 
+2018-01-08T21:21:35.974+0100 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-01-08T21:21:35.974+0100 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-01-08T21:21:35.974+0100 I CONTROL  [initandlisten] 
+2018-01-08T21:21:35.974+0100 I CONTROL  [initandlisten] 
+2018-01-08T21:21:35.974+0100 I CONTROL  [initandlisten] ** WARNING: The file system cache of this machine is configured to be greater than 40% of the total memory. This can lead to increased memory pressure and poor performance.
+2018-01-08T21:21:35.974+0100 I CONTROL  [initandlisten] See http://dochub.mongodb.org/core/wt-windows-system-file-cache
+2018-01-08T21:21:35.974+0100 I CONTROL  [initandlisten] 
+2018-01-08T21:21:38.754+0100 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontrÃ³ en el equipo.' for counter '\Memory\Available Bytes'
+2018-01-08T21:21:38.758+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/laura/Desktop/UniversidadUAH/ComputaciÃ³n ubicua/Pec2/medical_profiler/db/data/diagnostic.data'
+2018-01-08T21:21:38.858+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2018-01-08T21:21:38.858+0100 I STORAGE  [initandlisten] Service running
+2018-01-08T21:22:00.404+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53295 #1 (1 connection now open)
+2018-01-08T21:22:00.546+0100 I NETWORK  [conn1] received client metadata from 127.0.0.1:53295 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
+2018-01-08T21:22:00.588+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53296 #2 (2 connections now open)
+2018-01-08T21:22:00.771+0100 I INDEX    [conn1] build index on: medical_reports.patients properties: { v: 2, unique: true, key: { code_rfid: 1 }, name: "code_rfid_1", ns: "medical_reports.patients", background: true }
+2018-01-08T21:22:01.031+0100 I COMMAND  [conn1] command medical_reports.$cmd command: createIndexes { createIndexes: "patients", indexes: [ { name: "code_rfid_1", key: { code_rfid: 1 }, unique: true, background: true } ], $db: "medical_reports" } exception: E11000 duplicate key error collection: medical_reports.patients index: code_rfid_1 dup key: { : null } code:DuplicateKey numYields:0 reslen:189 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1, W: 2 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_query 404ms
+2018-01-08T21:44:34.311+0100 I NETWORK  [conn1] end connection 127.0.0.1:53295 (0 connections now open)
+2018-01-08T21:44:34.311+0100 I NETWORK  [conn2] end connection 127.0.0.1:53296 (1 connection now open)
+2018-01-08T21:44:35.543+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53481 #3 (1 connection now open)
+2018-01-08T21:44:35.557+0100 I NETWORK  [conn3] received client metadata from 127.0.0.1:53481 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
+2018-01-08T21:44:35.587+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53482 #4 (2 connections now open)
+2018-01-08T21:44:35.711+0100 I INDEX    [conn3] build index on: medical_reports.patients properties: { v: 2, unique: true, key: { code_rfid: 1 }, name: "code_rfid_1", ns: "medical_reports.patients", background: true }
+2018-01-08T21:44:35.711+0100 I COMMAND  [conn4] command medical_reports.doctors command: listIndexes { listIndexes: "doctors", cursor: {}, $db: "medical_reports" } numYields:0 reslen:317 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 1 }, acquireWaitCount: { r: 1 }, timeAcquiringMicros: { r: 113395 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_query 113ms
+2018-01-08T21:44:35.772+0100 I COMMAND  [conn3] command medical_reports.$cmd command: createIndexes { createIndexes: "patients", indexes: [ { name: "code_rfid_1", key: { code_rfid: 1 }, unique: true, background: true } ], $db: "medical_reports" } exception: E11000 duplicate key error collection: medical_reports.patients index: code_rfid_1 dup key: { : null } code:DuplicateKey numYields:0 reslen:189 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1, W: 2 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_query 183ms
+2018-01-08T21:52:00.578+0100 I COMMAND  [conn4] command medical_reports.nfcs command: find { find: "nfcs", filter: {}, projection: {}, $db: "medical_reports" } planSummary: COLLSCAN keysExamined:0 docsExamined:5 cursorExhausted:1 numYields:0 nreturned:5 reslen:551 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_query 121ms
+2018-01-08T21:56:14.507+0100 I COMMAND  [conn3] command medical_reports.nfcs command: insert { insert: "nfcs", ordered: false, $db: "medical_reports" } ninserted:1 keysInserted:1 numYields:0 reslen:44 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_query 121ms
+2018-01-08T21:59:06.191+0100 I NETWORK  [conn4] end connection 127.0.0.1:53482 (1 connection now open)
+2018-01-08T21:59:06.191+0100 I NETWORK  [conn3] end connection 127.0.0.1:53481 (0 connections now open)
+2018-01-08T21:59:07.446+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53560 #5 (1 connection now open)
+2018-01-08T21:59:07.459+0100 I NETWORK  [conn5] received client metadata from 127.0.0.1:53560 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
+2018-01-08T21:59:07.489+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53561 #6 (2 connections now open)
+2018-01-08T21:59:07.702+0100 I INDEX    [conn5] build index on: medical_reports.patients properties: { v: 2, unique: true, key: { code_rfid: 1 }, name: "code_rfid_1", ns: "medical_reports.patients", background: true }
+2018-01-08T21:59:07.755+0100 I COMMAND  [conn5] command medical_reports.$cmd command: createIndexes { createIndexes: "patients", indexes: [ { name: "code_rfid_1", key: { code_rfid: 1 }, unique: true, background: true } ], $db: "medical_reports" } exception: E11000 duplicate key error collection: medical_reports.patients index: code_rfid_1 dup key: { : null } code:DuplicateKey numYields:0 reslen:189 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1, W: 2 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_query 264ms
+2018-01-08T22:05:55.293+0100 I NETWORK  [conn5] end connection 127.0.0.1:53560 (1 connection now open)
+2018-01-08T22:05:55.294+0100 I NETWORK  [conn6] end connection 127.0.0.1:53561 (0 connections now open)
+2018-01-08T22:05:56.254+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53639 #7 (1 connection now open)
+2018-01-08T22:05:56.263+0100 I NETWORK  [conn7] received client metadata from 127.0.0.1:53639 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.16299" }, platform: "Node.js v8.9.3, LE, mongodb-core: 2.1.17" }
+2018-01-08T22:05:56.282+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53640 #8 (2 connections now open)
+2018-01-08T22:05:56.488+0100 I INDEX    [conn7] build index on: medical_reports.patients properties: { v: 2, unique: true, key: { code_rfid: 1 }, name: "code_rfid_1", ns: "medical_reports.patients", background: true }
+2018-01-08T22:05:56.527+0100 I COMMAND  [conn7] command medical_reports.$cmd command: createIndexes { createIndexes: "patients", indexes: [ { name: "code_rfid_1", key: { code_rfid: 1 }, unique: true, background: true } ], $db: "medical_reports" } exception: E11000 duplicate key error collection: medical_reports.patients index: code_rfid_1 dup key: { : null } code:DuplicateKey numYields:0 reslen:189 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1, W: 2 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_query 244ms
+2018-01-08T22:06:00.320+0100 I NETWORK  [conn7] end connection 127.0.0.1:53639 (1 connection now open)
+2018-01-08T22:06:00.320+0100 I NETWORK  [conn8] end connection 127.0.0.1:53640 (0 connections now open)
+2018-01-08T22:07:13.199+0100 I CONTROL  [serviceShutdown] got SERVICE_CONTROL_STOP request from Windows Service Control Manager, will terminate after current cmd ends
+2018-01-08T22:07:13.228+0100 I NETWORK  [serviceShutdown] shutdown: going to close listening sockets...
+2018-01-08T22:07:13.228+0100 F CONTROL  [thread9] Encountered an error in PeriodicRunnerASIO: La operación de E/S se anuló por una salida de subproceso o por una solicitud de aplicación.
+2018-01-08T22:07:13.229+0100 F CONTROL  [thread9] Encountered an error in PeriodicRunnerASIO: La operación de E/S se anuló por una salida de subproceso o por una solicitud de aplicación.
+2018-01-08T22:07:13.236+0100 I FTDC     [serviceShutdown] Shutting down full-time diagnostic data capture
+2018-01-08T22:07:13.252+0100 I STORAGE  [serviceShutdown] WiredTigerKVEngine shutting down
+2018-01-08T22:07:13.896+0100 I STORAGE  [serviceShutdown] shutdown: removing fs lock...
+2018-01-08T22:07:13.898+0100 I CONTROL  [serviceShutdown] now exiting

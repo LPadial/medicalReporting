@@ -28,6 +28,15 @@ exports.addPatient = function(req, res) {
 	});
 };
 
+
+//PUT - update room by rfid in the DB
+exports.updateRoomRfid = function(req, res) {
+	Patients.update({'code_rfid': req.params.code_rfid}, {room: req.body.room}, function(err, patient){
+		if (err) return handleError(err);
+  	res.status(200).jsonp(patient);
+	});
+};
+
 //PUT - Update a register already exists
 exports.updatePatient = function(req, res) {
 	Patients.findById(req.params.id, function(err, patient) {

@@ -17,8 +17,8 @@ api.route('/patientsRoom/:room')
 .get(md_checkLogin.ensureAuth, patientsController.findMyPatientsRoom);
 
 api.route('/patientsRfid/:code_rfid')
-.get(md_checkLogin.ensureAuth, patientsController.findPatientByRfid);
-
+.get(md_checkLogin.ensureAuth, patientsController.findPatientByRfid)
+.put(md_checkLogin.ensureAuth, patientsController.updateRoomRfid);
 
 
 module.exports = api;
